@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Bitcoin Monitor</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fab fa-btc fa-2x"></i> Monitor</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mt-5 d-flex justify-content-center" id="output">
+        <table class="table mx-auto ">
+            <thead class="thead">
+                <tr class="text-white bg-dark">
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Current Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="usd-row">
+                    <td>
+                        <i class="fas fa-dollar-sign"></i>
+                    </td>
+                    <td id="usd-desc"></td>
+                    <td id="usd-rate"></td>
+                </tr>
+                <tr id="gbp-row">
+                    <td>
+                        <i class="fas fa-pound-sign"></i>
+                    </td>
+                    <td id="gbp-desc"></td>
+                    <td id="gbp-rate"></td>
+                </tr>
+                <tr id="eur-row">
+                    <td>
+                        <i class="fas fa-euro-sign"></i>
+                    </td>
+                    <td id="eur-desc"></td>
+                    <td id="eur-rate"></td>
+                </tr>
+                <tr id="dynamic-row">
+                    <td>
+                        <select class="form-control w-50" id="select-curr">
+                        </select>
+                    </td>
+                    <td id="dynamic-desc"></td>
+                    <td id="dynamic-rate"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+        <button class="btn mt-3" type="submit">Refresh</button>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
